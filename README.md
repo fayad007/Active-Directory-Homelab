@@ -50,10 +50,10 @@ Everything in this lab was built, configured, and tested end-to-end — from pro
 
 | Component | Details |
 |---|---|
-| Hypervisor | * VirtualBox * |
+| Hypervisor |  *(VirtualBox)*  |
 | Domain Controller | Windows Server *(version)* |
 | Client machine | *( Windows 10/11 )* |
-| Domain name | *(e.g. corp.local)* |
+| Domain name | *(mydfir.local)* |
 | Domain users | 25 |
 | Security groups | 6 |
 | Organizational Units | 4 |
@@ -88,7 +88,7 @@ Everything in this lab was built, configured, and tested end-to-end — from pro
 The domain is organized into 4 OUs mapped to business functions, with 6 security groups nested underneath for permission and policy targeting.
 
 ```
-corp.local
+mydfir.local
 │
 ├── OU: Finance
 │   └── Group: Finance_Users
@@ -179,31 +179,16 @@ Rather than just configuring policy and walking away, each GPO and service was *
 
 ---
 
-## 📸 Screenshots
-
-> ⚠️ **Add your real screenshots here** — this is the single highest-impact section for a hiring manager, since it turns every claim above into visible proof. Suggested shots:
-
-| Screenshot | What to Capture |
-|---|---|
-| `screenshots/ad-users-and-computers.png` | Active Directory Users and Computers — full OU/group tree |
-| `screenshots/gpo-password-policy.png` | Password & Account Lockout GPO settings |
-| `screenshots/gpo-usb-restriction.png` | USB device restriction GPO settings |
-| `screenshots/domain-join-success.png` | A client machine successfully joined to the domain |
-| `screenshots/account-lockout-test.png` | Account lockout triggered after failed logins |
-| `screenshots/gpresult-output.png` | `gpresult /r` output confirming applied policies on a client |
-| `screenshots/dns-dhcp-config.png` | DNS/DHCP configuration on the Domain Controller |
-
-Once added, embed them like this:
-
-```markdown
-![AD Users and Computers](screenshots/ad-users-and-computers.png)
-```
-
----
-
 ## 💡 Key Takeaways
 
-*(Add 2–3 sentences in your own words — what surprised you, what was harder than expected, or what you'd do differently on a second pass. This section is what separates a checklist from a reflection, and hiring managers notice the difference.)*
+1) Configuration is only half the job — verification matters.
+I learned that setting up a GPO doesn't guarantee it works as intended. Testing password policies, account lockout, and other restrictions helped me understand the importance of verifying configurations instead of simply assuming they work.
+2) Active Directory design requires planning.
+Creating separate OUs and groups for IT, HR, Finance, and Operations showed me that AD isn't just about creating users. The structure needs to reflect how users, departments, and access requirements are organized within a business.
+3) Troubleshooting is part of administration.
+Working through issues with domain connectivity, DNS, Group Policy application, and permissions helped me understand that identifying the root cause is just as important as knowing how to configure the technology.
+4) The lab gave me a foundation for further learning.
+This project motivated me to explore PowerShell automation, advanced Group Policy, Active Directory delegation, and managing multiple domain controllers to build a more complete Windows infrastructure environment.
 
 ---
 
