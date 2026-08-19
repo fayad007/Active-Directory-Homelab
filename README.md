@@ -50,9 +50,9 @@ Everything in this lab was built, configured, and tested end-to-end — from pro
 
 | Component | Details |
 |---|---|
-| Hypervisor | *(e.g. VirtualBox / VMware / Hyper-V — fill in what you used)* |
+| Hypervisor | * VirtualBox * |
 | Domain Controller | Windows Server *(version)* |
-| Client machines | *(e.g. Windows 10/11 — how many)* |
+| Client machine | *( Windows 10/11 )* |
 | Domain name | *(e.g. corp.local)* |
 | Domain users | 25 |
 | Security groups | 6 |
