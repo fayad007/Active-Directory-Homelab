@@ -21,7 +21,6 @@
 - [Group Policy Objects](#-group-policy-objects)
 - [Testing & Troubleshooting](#-testing--troubleshooting)
 - [Skills Demonstrated](#-skills-demonstrated)
-- [Screenshots](#-screenshots)
 - [Key Takeaways](#-key-takeaways)
 - [Future Improvements](#-future-improvements)
 
@@ -50,8 +49,8 @@ Everything in this lab was built, configured, and tested end-to-end — from pro
 
 | Component | Details |
 |---|---|
-| Hypervisor |  *(VirtualBox)*  |
-| Domain Controller | Windows Server *(version)* |
+| Hypervisor |  *Oracle VirtualBox*  |
+| Domain Controller | Windows Server *()* |
 | Client machine | *( Windows 10/11 )* |
 | Domain name | *(mydfir.local)* |
 | Domain users | 25 |
@@ -65,7 +64,7 @@ Everything in this lab was built, configured, and tested end-to-end — from pro
 ## 🌐 Network & Domain Architecture
 
 ```
-                        ┌────────────────────────┐
+                        ┌─────────────────────────┐
                         │   Windows Server (DC)   │
                         │  Active Directory DS    │
                         │  DNS  +  DHCP           │
@@ -73,13 +72,12 @@ Everything in this lab was built, configured, and tested end-to-end — from pro
                                      │
                      ┌───────────────┼───────────────┐
                      │               │               │
-             ┌───────▼──────┐ ┌──────▼───────┐ ┌─────▼────────┐
+             ┌───────▼───────┐ ┌──────▼────────┐ ┌─────▼─────────┐
              │  Client PC 1  │ │  Client PC 2  │ │  Client PC 3  │
              │(Domain-Joined)│ │(Domain-Joined)│ │(Domain-Joined)│
              └───────────────┘ └───────────────┘ └───────────────┘
 ```
 
-*(Replace with a real network diagram export from your hypervisor or a tool like draw.io once available — see [Screenshots](#-screenshots).)*
 
 ---
 
